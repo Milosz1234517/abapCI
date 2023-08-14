@@ -9,7 +9,6 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 
-import javax.xml.bind.DatatypeConverter;
 
 public class JenkinsConnection {
 
@@ -33,7 +32,7 @@ public class JenkinsConnection {
 
 			URL url = new URL(urlstring);
 			String authStr = username + ":" + password;
-			String encoding = DatatypeConverter.printBase64Binary(authStr.getBytes("utf-8"));
+			String encoding = new String(authStr.getBytes("utf-8"));
 
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod("GET");

@@ -52,9 +52,10 @@ public class AbapAtcHandler extends AbstractHandler {
 		boolean forceObjectSet = true;
 		boolean includeExemptedFindings = false;
 
+		//sus, added empty string at the end
 		return worklistBackendAccess.getWorklist(abapProject, worklistRun.getWorklistId(),
 				worklistRun.getWorklistTimestamp().toString(), objectSetName, forceObjectSet, includeExemptedFindings,
-				progressMonitor);
+				progressMonitor,"");
 
 	}
 
@@ -78,9 +79,10 @@ public class AbapAtcHandler extends AbstractHandler {
 		boolean includeExemptedFindings = false;
 		String objectSetName = "TODO";
 
+		//sus, added empty string at the end
 		return worklistBackendAccess.getWorklist(abapProject, worklistRun.getWorklistId(),
 				worklistRun.getWorklistTimestamp().toString(), objectSetName, forceObjectSet, includeExemptedFindings,
-				progressMonitor);
+				progressMonitor,"");
 
 	}
 

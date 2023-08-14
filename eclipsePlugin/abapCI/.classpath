@@ -63,7 +63,7 @@
 			<accessrule kind="accessible" pattern="com/sap/adt/projectexplorer/ui/node/IAbapRepositoryObjectNode"/>
 		</accessrules>
 	</classpathentry>
-	<classpathentry kind="src" output="target/classes" path="src">
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
